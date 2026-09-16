@@ -1,0 +1,23 @@
+name: ai_frame_rate_demo
+description: >
+  Demo project for the talk "Don't Let Your AI Feature Wreck Your Frame Rate".
+  Shows the difference between running a heavy "AI" computation on the main
+  (UI) isolate vs. running it on a background isolate using compute().
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
