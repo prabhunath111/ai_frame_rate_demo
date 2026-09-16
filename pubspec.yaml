@@ -1,8 +1,10 @@
 name: ai_frame_rate_demo
 description: >
   Demo project for the talk "Don't Let Your AI Feature Wreck Your Frame Rate".
-  Shows the difference between running a heavy "AI" computation on the main
-  (UI) isolate vs. running it on a background isolate using compute().
+  Makes a REAL call to Google's Gemini API (free tier), gets a REAL response,
+  and then compares running real post-processing work (fuzzy spell-check /
+  unusual-term detection via Levenshtein distance) on the UI isolate vs. a
+  background isolate via compute().
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -13,6 +15,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
